@@ -1,0 +1,253 @@
+﻿@* Details.cshtml - Display employee details with modern design and salary section *@
+@model Employee
+@{
+    ViewData["Title"] = "Employee Details";
+    var salaries = ViewBag.Salaries as IEnumerable<emp_management.Models.Salary> ?? Enumerable.Empty<emp_management.Models.Salary>();
+    var latestSalary = salaries.FirstOrDefault();
+}
+
+<div class="page-header slide-in-left">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <div>
+            <h2><i class="fas fa-id-card me-3"></i>Employee Profile</h2>
+            <p class="mb-0">Viewing details for employee ID: #@Model.Id</p>
+        </div>
+        <div class="d-flex gap-2">
+            @if (User.Identity?.IsAuthenticated == true)
+            {
+                <a asp-controller="Salaries" asp-action="ByEmployee" asp-route-id="@Model.Id" class="btn btn-success">
+                    <i class="fas fa-money-bill-wave me-2"></i>Manage Salary
+                </a>
+                <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">
+                    <i class="fas fa-edit me-2"></i>Edit Details
+                </a>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="row fade-in">
+    <div class="col-md-8">
+        <div class="card-custom">
+            <div class="card-header-custom">
+                <i class="fas fa-user-circle me-3"></i>Personal Information
+            </div>
+            <div class="card-body-custom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="detail-row">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="detail-label">
+                                        <i class="fas fa-hashtag me-2"></i>Employee ID
+                                    </span>
+                                </div>
+                                <div class="col-md-8">
+                                    <span class="detail-value"><strong>#@Model.Id</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="detail-label">
+                                        <i class="fas fa-user me-2"></i>First Name
+                                    </span>
+                                </div>
+                                <div class="col-md-8">
+                                    <span class="detail-value">@Model.FirstName</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="detail-label">
+                                        <i class="fas fa-user me-2"></i>Middle Name
+                                    </span>
+                                </div>
+                                <div class="col-md-8">
+                                    <span class="detail-value">@(Model.MiddleName ?? "N/A")</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="detail-label">
+                                        <i class="fas fa-user me-2"></i>Last Name
+                                    </span>
+                                </div>
+                                <div class="col-md-8">
+                                    <span class="detail-value">@Model.LastName</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="detail-label">
+                                        <i class="fas fa-envelope me-2"></i>Email
+                                    </span>
+                                </div>
+                                <div class="col-md-8">
+                                    <span class="detail-value">
+                                        <a href="mailto:@Model.Email" style="color: #667eea;">@Model.Email</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="detail-row">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="detail-label">
+                                        <i class="fas fa-phone me-2"></i>Phone
+                                    </span>
+                                </div>
+                                <div class="col-md-8">
+                                    <span class="detail-value">
+                                        <a href="tel:@Model.Phone" style="color: #667eea;">@Model.Phone</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="detail-label">
+                                        <i class="fas fa-map-marker-alt me-2"></i>Address
+                                    </span>
+                                </div>
+                                <div class="col-md-8">
+                                    <span class="detail-value">@Model.Address</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="detail-label">
+                                        <i class="fas fa-building me-2"></i>Department
+                                    </span>
+                                </div>
+                                <div class="col-md-8">
+                                    <span class="badge badge-custom badge-primary">@Model.Department</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="detail-label">
+                                        <i class="fas fa-briefcase me-2"></i>Designation
+                                    </span>
+                                </div>
+                                <div class="col-md-8">
+                                    <span class="detail-value"><strong>@Model.Designation</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="detail-label">
+                                        <i class="fas fa-calendar-alt me-2"></i>Joined On
+                                    </span>
+                                </div>
+                                <div class="col-md-8">
+                                    <span class="detail-value">
+                                        @Model.DateOfJoining.ToString("MMMM dd, yyyy")
+                                        <small class="text-muted">
+                                            (@((DateTime.Now - Model.DateOfJoining).Days / 365) years ago)
+                                        </small>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card-custom" style="background: var(--success-gradient);">
+            <div class="card-body-custom text-white">
+                <h5 class="mb-3"><i class="fas fa-rupee-sign me-2"></i>Current Salary</h5>
+                @if (latestSalary != null)
+                {
+                    <h2 class="mb-3">₹@(latestSalary.NetSalary)</h2>
+                    <div class="mb-2">
+                        <small><i class="fas fa-calendar me-2"></i>Period: @latestSalary.Month/@latestSalary.Year</small>
+                    </div>
+                    <hr style="border-color: rgba(255,255,255,0.3);" />
+                    <div class="row">
+                        <div class="col-6">
+                            <small class="d-block opacity-75">Basic</small>
+                            <strong>₹@(latestSalary.Basic)</strong>
+                        </div>
+                        <div class="col-6">
+                            <small class="d-block opacity-75">Allowances</small>
+                            <strong>₹@(latestSalary.Allowances)</strong>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6">
+                            <small class="d-block opacity-75">Deductions</small>
+                            <strong>₹@(latestSalary.Deductions)</strong>
+                        </div>
+                        <div class="col-6">
+                            <small class="d-block opacity-75">Net Salary</small>
+                            <strong>₹@(latestSalary.NetSalary)</strong>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <p class="mb-3"><i class="fas fa-info-circle me-2"></i>No salary record found</p>
+                    @if (User.Identity?.IsAuthenticated == true)
+                    {
+                        <a asp-controller="Salaries" asp-action="Create" asp-route-employeeId="@Model.Id" class="btn btn-light">
+                            <i class="fas fa-plus me-2"></i>Add Salary
+                        </a>
+                    }
+                }
+                
+                @if (latestSalary != null && User.Identity?.IsAuthenticated == true)
+                {
+                    <div class="mt-3">
+                        <a asp-controller="Salaries" asp-action="ByEmployee" asp-route-id="@Model.Id" class="btn btn-light w-100">
+                            <i class="fas fa-history me-2"></i>View Salary History
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-4 fade-in">
+    @if (User.Identity?.IsAuthenticated == true)
+    {
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning me-2">
+            <i class="fas fa-edit me-2"></i>Edit Employee
+        </a>
+        <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger me-2">
+            <i class="fas fa-trash me-2"></i>Delete Employee
+        </a>
+    }
+    <a asp-action="Index" class="btn btn-secondary">
+        <i class="fas fa-arrow-left me-2"></i>Back to List
+    </a>
+</div>

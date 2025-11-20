@@ -1,0 +1,197 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Mahipal\\source\\repos\\emp management\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F92DB774-D1B0-46AA-8AFC-B89B221C0685}|emp management\\emp management.csproj|c:\\users\\mahipal\\source\\repos\\emp management\\emp management\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{F92DB774-D1B0-46AA-8AFC-B89B221C0685}|emp management\\emp management.csproj|solutionrelative:emp management\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F92DB774-D1B0-46AA-8AFC-B89B221C0685}|emp management\\emp management.csproj|c:\\users\\mahipal\\source\\repos\\emp management\\emp management\\views\\salaries\\byemployee.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F92DB774-D1B0-46AA-8AFC-B89B221C0685}|emp management\\emp management.csproj|solutionrelative:emp management\\views\\salaries\\byemployee.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F92DB774-D1B0-46AA-8AFC-B89B221C0685}|emp management\\emp management.csproj|c:\\users\\mahipal\\source\\repos\\emp management\\emp management\\views\\employees\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F92DB774-D1B0-46AA-8AFC-B89B221C0685}|emp management\\emp management.csproj|solutionrelative:emp management\\views\\employees\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F92DB774-D1B0-46AA-8AFC-B89B221C0685}|emp management\\emp management.csproj|c:\\users\\mahipal\\source\\repos\\emp management\\emp management\\views\\employees\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F92DB774-D1B0-46AA-8AFC-B89B221C0685}|emp management\\emp management.csproj|solutionrelative:emp management\\views\\employees\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F92DB774-D1B0-46AA-8AFC-B89B221C0685}|emp management\\emp management.csproj|c:\\users\\mahipal\\source\\repos\\emp management\\emp management\\views\\salaries\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F92DB774-D1B0-46AA-8AFC-B89B221C0685}|emp management\\emp management.csproj|solutionrelative:emp management\\views\\salaries\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F92DB774-D1B0-46AA-8AFC-B89B221C0685}|emp management\\emp management.csproj|c:\\users\\mahipal\\source\\repos\\emp management\\emp management\\views\\employees\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F92DB774-D1B0-46AA-8AFC-B89B221C0685}|emp management\\emp management.csproj|solutionrelative:emp management\\views\\employees\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F92DB774-D1B0-46AA-8AFC-B89B221C0685}|emp management\\emp management.csproj|c:\\users\\mahipal\\source\\repos\\emp management\\emp management\\views\\employees\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F92DB774-D1B0-46AA-8AFC-B89B221C0685}|emp management\\emp management.csproj|solutionrelative:emp management\\views\\employees\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F92DB774-D1B0-46AA-8AFC-B89B221C0685}|emp management\\emp management.csproj|c:\\users\\mahipal\\source\\repos\\emp management\\emp management\\views\\employees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F92DB774-D1B0-46AA-8AFC-B89B221C0685}|emp management\\emp management.csproj|solutionrelative:emp management\\views\\employees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F92DB774-D1B0-46AA-8AFC-B89B221C0685}|emp management\\emp management.csproj|c:\\users\\mahipal\\source\\repos\\emp management\\emp management\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F92DB774-D1B0-46AA-8AFC-B89B221C0685}|emp management\\emp management.csproj|solutionrelative:emp management\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F92DB774-D1B0-46AA-8AFC-B89B221C0685}|emp management\\emp management.csproj|c:\\users\\mahipal\\source\\repos\\emp management\\emp management\\views\\salaries\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F92DB774-D1B0-46AA-8AFC-B89B221C0685}|emp management\\emp management.csproj|solutionrelative:emp management\\views\\salaries\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F92DB774-D1B0-46AA-8AFC-B89B221C0685}|emp management\\emp management.csproj|c:\\users\\mahipal\\source\\repos\\emp management\\emp management\\helpers\\currencyhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F92DB774-D1B0-46AA-8AFC-B89B221C0685}|emp management\\emp management.csproj|solutionrelative:emp management\\helpers\\currencyhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ByEmployee.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mahipal\\source\\repos\\emp management\\emp management\\Views\\Salaries\\ByEmployee.cshtml",
+              "RelativeDocumentMoniker": "emp management\\Views\\Salaries\\ByEmployee.cshtml",
+              "ToolTip": "C:\\Users\\Mahipal\\source\\repos\\emp management\\emp management\\Views\\Salaries\\ByEmployee.cshtml",
+              "RelativeToolTip": "emp management\\Views\\Salaries\\ByEmployee.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T23:49:58.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mahipal\\source\\repos\\emp management\\emp management\\Views\\Employees\\Details.cshtml",
+              "RelativeDocumentMoniker": "emp management\\Views\\Employees\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Mahipal\\source\\repos\\emp management\\emp management\\Views\\Employees\\Details.cshtml",
+              "RelativeToolTip": "emp management\\Views\\Employees\\Details.cshtml",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAAANMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T23:47:29.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mahipal\\source\\repos\\emp management\\emp management\\Views\\Employees\\Create.cshtml",
+              "RelativeDocumentMoniker": "emp management\\Views\\Employees\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Mahipal\\source\\repos\\emp management\\emp management\\Views\\Employees\\Create.cshtml",
+              "RelativeToolTip": "emp management\\Views\\Employees\\Create.cshtml",
+              "ViewState": "AgIAAG0AAAAAAAAAAAASwH0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T23:47:28.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\Mahipal\\source\\repos\\emp management\\emp management\\README.md",
+              "RelativeDocumentMoniker": "emp management\\README.md",
+              "ToolTip": "C:\\Users\\Mahipal\\source\\repos\\emp management\\emp management\\README.md",
+              "RelativeToolTip": "emp management\\README.md",
+              "ViewState": "AgIAAPEAAAAAAAAAAAAAAPEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-11T22:17:27.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mahipal\\source\\repos\\emp management\\emp management\\Views\\Salaries\\Create.cshtml",
+              "RelativeDocumentMoniker": "emp management\\Views\\Salaries\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Mahipal\\source\\repos\\emp management\\emp management\\Views\\Salaries\\Create.cshtml",
+              "RelativeToolTip": "emp management\\Views\\Salaries\\Create.cshtml",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAiwIAAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T23:17:54.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mahipal\\source\\repos\\emp management\\emp management\\Views\\Employees\\Edit.cshtml",
+              "RelativeDocumentMoniker": "emp management\\Views\\Employees\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Mahipal\\source\\repos\\emp management\\emp management\\Views\\Employees\\Edit.cshtml",
+              "RelativeToolTip": "emp management\\Views\\Employees\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T23:47:31.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mahipal\\source\\repos\\emp management\\emp management\\Views\\Employees\\Delete.cshtml",
+              "RelativeDocumentMoniker": "emp management\\Views\\Employees\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Mahipal\\source\\repos\\emp management\\emp management\\Views\\Employees\\Delete.cshtml",
+              "RelativeToolTip": "emp management\\Views\\Employees\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T23:47:26.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mahipal\\source\\repos\\emp management\\emp management\\Views\\Employees\\Index.cshtml",
+              "RelativeDocumentMoniker": "emp management\\Views\\Employees\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Mahipal\\source\\repos\\emp management\\emp management\\Views\\Employees\\Index.cshtml",
+              "RelativeToolTip": "emp management\\Views\\Employees\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T23:47:32.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mahipal\\source\\repos\\emp management\\emp management\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "emp management\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Mahipal\\source\\repos\\emp management\\emp management\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "emp management\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T23:47:08.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CurrencyHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Mahipal\\source\\repos\\emp management\\emp management\\Helpers\\CurrencyHelper.cs",
+              "RelativeDocumentMoniker": "emp management\\Helpers\\CurrencyHelper.cs",
+              "ToolTip": "C:\\Users\\Mahipal\\source\\repos\\emp management\\emp management\\Helpers\\CurrencyHelper.cs",
+              "RelativeToolTip": "emp management\\Helpers\\CurrencyHelper.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAABRwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T23:25:25.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mahipal\\source\\repos\\emp management\\emp management\\Views\\Salaries\\Edit.cshtml",
+              "RelativeDocumentMoniker": "emp management\\Views\\Salaries\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Mahipal\\source\\repos\\emp management\\emp management\\Views\\Salaries\\Edit.cshtml",
+              "RelativeToolTip": "emp management\\Views\\Salaries\\Edit.cshtml",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAAAFAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T23:25:07.512Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

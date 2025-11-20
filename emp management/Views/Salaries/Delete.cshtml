@@ -1,0 +1,132 @@
+@* Delete.cshtml - Confirmation page for deleting a salary record *@
+@model emp_management.Models.Salary
+@{
+    ViewData["Title"] = "Delete Salary Record";
+    var employee = ViewBag.Employee as emp_management.Models.Employee;
+    var monthNames = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.MonthNames;
+}
+
+<div class="page-header slide-in-left" style="background: var(--danger-gradient);">
+    <h2><i class="fas fa-exclamation-triangle me-3"></i>Delete Salary Record</h2>
+    <p class="mb-0">Permanently remove salary record from the system</p>
+</div>
+
+<div class="alert alert-danger fade-in">
+    <div class="d-flex align-items-center">
+        <i class="fas fa-exclamation-circle fa-3x me-3"></i>
+        <div>
+            <h4 class="mb-2">Are you absolutely sure?</h4>
+            <p class="mb-0">
+                This will permanently delete the salary record for <strong>@employee.FirstName @employee.LastName</strong> 
+                for <strong>@monthNames[Model.Month - 1] @Model.Year</strong>.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row fade-in">
+    <div class="col-md-12">
+        <div class="card-custom">
+            <div class="card-header-custom" style="background: var(--danger-gradient);">
+                <i class="fas fa-money-bill-wave me-3"></i>Salary Information to be Deleted
+            </div>
+            <div class="card-body-custom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="detail-row">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <span class="detail-label">
+                                        <i class="fas fa-user me-2"></i>Employee
+                                    </span>
+                                </div>
+                                <div class="col-md-7">
+                                    <span class="detail-value">@employee.FirstName @employee.LastName</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <span class="detail-label">
+                                        <i class="fas fa-calendar me-2"></i>Period
+                                    </span>
+                                </div>
+                                <div class="col-md-7">
+                                    <span class="detail-value">@monthNames[Model.Month - 1] @Model.Year</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <span class="detail-label">
+                                        <i class="fas fa-rupee-sign me-2"></i>Basic Salary
+                                    </span>
+                                </div>
+                                <div class="col-md-7">
+                                    <span class="detail-value">@CurrencyHelper.FormatINR(Model.Basic)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="detail-row">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <span class="detail-label">
+                                        <i class="fas fa-plus-circle me-2"></i>Allowances
+                                    </span>
+                                </div>
+                                <div class="col-md-7">
+                                    <span class="detail-value text-success">@CurrencyHelper.FormatINR(Model.Allowances)</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <span class="detail-label">
+                                        <i class="fas fa-minus-circle me-2"></i>Deductions
+                                    </span>
+                                </div>
+                                <div class="col-md-7">
+                                    <span class="detail-value text-danger">@CurrencyHelper.FormatINR(Model.Deductions)</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <span class="detail-label">
+                                        <i class="fas fa-rupee-sign me-2"></i>Net Salary
+                                    </span>
+                                </div>
+                                <div class="col-md-7">
+                                    <span class="detail-value"><strong>@CurrencyHelper.FormatINR(Model.NetSalary)</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form asp-action="Delete" method="post" class="mt-4 fade-in">
+    <input type="hidden" asp-for="Id" />
+    <div class="d-flex gap-2">
+        <button type="submit" class="btn btn-danger">
+            <i class="fas fa-trash-alt me-2"></i>Yes, Delete Permanently
+        </button>
+        <a asp-action="ByEmployee" asp-route-id="@employee.Id" class="btn btn-secondary">
+            <i class="fas fa-times me-2"></i>No, Cancel
+        </a>
+    </div>
+</form>

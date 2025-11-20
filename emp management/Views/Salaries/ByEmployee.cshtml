@@ -1,0 +1,151 @@
+﻿@* ByEmployee.cshtml - Display all salary records for a specific employee *@
+@model IEnumerable<emp_management.Models.Salary>
+@{
+    ViewData["Title"] = "Salary History";
+    var employee = ViewBag.Employee as emp_management.Models.Employee;
+    var monthNames = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.MonthNames;
+}
+
+<div class="page-header slide-in-left">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <div>
+            <h2><i class="fas fa-money-bill-wave me-3"></i>Salary History</h2>
+            <p class="mb-0">
+                <i class="fas fa-user me-2"></i><strong>@employee.FirstName @employee.LastName</strong> 
+                <span class="text-white-50">(@employee.Department - @employee.Designation)</span>
+            </p>
+        </div>
+        @if (User.Identity?.IsAuthenticated == true)
+        {
+            <a asp-action="Create" asp-route-employeeId="@employee.Id" class="btn btn-success">
+                <i class="fas fa-plus me-2"></i>Add Salary Record
+            </a>
+        }
+    </div>
+</div>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show fade-in" role="alert">
+        <i class="fas fa-check-circle me-2"></i>
+        <strong>Success!</strong> @TempData["Success"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show fade-in" role="alert">
+        <i class="fas fa-exclamation-circle me-2"></i>
+        <strong>Error!</strong> @TempData["Error"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+@if (Model != null && Model.Any())
+{
+    <div class="table-responsive fade-in">
+        <table class="table table-custom">
+            <thead>
+                <tr>
+                    <th><i class="fas fa-calendar me-2"></i>Period</th>
+                    <th><i class="fas fa-money-bill me-2"></i>Basic Salary</th>
+                    <th><i class="fas fa-plus-circle me-2"></i>Allowances</th>
+                    <th><i class="fas fa-minus-circle me-2"></i>Deductions</th>
+                    <th><i class="fas fa-rupee-sign me-2"></i>Net Salary</th>
+                    @if (User.Identity?.IsAuthenticated == true)
+                    {
+                        <th><i class="fas fa-cog me-2"></i>Actions</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var salary in Model)
+                {
+                    <tr>
+                        <td>
+                            <strong>@monthNames[salary.Month - 1] @salary.Year</strong>
+                        </td>
+                        <td>₹@(salary.Basic)</td>
+                        <td><span class="text-success">₹@(salary.Allowances)</span></td>
+                        <td><span class="text-danger">₹@(salary.Deductions)</span></td>
+                        <td><strong class="text-primary">₹@(salary.NetSalary)</strong></td>
+                        @if (User.Identity?.IsAuthenticated == true)
+                        {
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <a asp-action="Edit" asp-route-id="@salary.Id" class="btn btn-sm btn-warning" title="Edit Salary">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a asp-action="Delete" asp-route-id="@salary.Id" class="btn btn-sm btn-danger" title="Delete Salary">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row mt-4 fade-in">
+        <div class="col-md-3">
+            <div class="card-custom" style="background: var(--primary-gradient);">
+                <div class="card-body-custom text-white text-center">
+                    <h6><i class="fas fa-list me-2"></i>Total Records</h6>
+                    <h3>@Model.Count()</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card-custom" style="background: var(--success-gradient);">
+                <div class="card-body-custom text-white text-center">
+                    <h6><i class="fas fa-arrow-up me-2"></i>Avg Allowances</h6>
+                    <h3>₹@(Model.Average(s => s.Allowances))</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card-custom" style="background: var(--danger-gradient);">
+                <div class="card-body-custom text-white text-center">
+                    <h6><i class="fas fa-arrow-down me-2"></i>Avg Deductions</h6>
+                    <h3>₹@(Model.Average(s => s.Deductions))</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card-custom" style="background: var(--info-gradient);">
+                <div class="card-body-custom text-white text-center">
+                    <h6><i class="fas fa-wallet me-2"></i>Avg Net Salary</h6>
+                    <h3>₹@(Model.Average(s => s.NetSalary))</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="alert alert-info fade-in">
+        <div class="text-center py-5">
+            <i class="fas fa-money-bill-wave fa-5x mb-4" style="color: #667eea; opacity: 0.3;"></i>
+            <h4>No salary records found</h4>
+            <p class="mb-3">Start by adding the first salary record for this employee.</p>
+            @if (User.Identity?.IsAuthenticated == true)
+            {
+                <a asp-action="Create" asp-route-employeeId="@employee.Id" class="btn btn-success">
+                    <i class="fas fa-plus me-2"></i>Add First Salary Record
+                </a>
+            }
+        </div>
+    </div>
+}
+
+<div class="mt-4 fade-in">
+    <a asp-controller="Employees" asp-action="Details" asp-route-id="@employee.Id" class="btn btn-secondary">
+        <i class="fas fa-user me-2"></i>Back to Employee
+    </a>
+    <a asp-controller="Employees" asp-action="Index" class="btn btn-secondary">
+        <i class="fas fa-arrow-left me-2"></i>Back to List
+    </a>
+</div>

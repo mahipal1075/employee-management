@@ -1,0 +1,127 @@
+@* Delete.cshtml - Confirmation page for deleting an employee with modern design *@
+@model Employee
+@{
+    ViewData["Title"] = "Delete Employee";
+}
+
+<div class="page-header slide-in-left" style="background: var(--danger-gradient);">
+    <h2><i class="fas fa-exclamation-triangle me-3"></i>Delete Employee</h2>
+    <p class="mb-0">Permanently remove employee from the system</p>
+</div>
+
+<div class="alert alert-danger fade-in">
+    <div class="d-flex align-items-center">
+        <i class="fas fa-exclamation-circle fa-3x me-3"></i>
+        <div>
+            <h4 class="mb-2">Are you absolutely sure?</h4>
+            <p class="mb-0">This action cannot be undone. This will permanently delete the employee record for <strong>@Model.FirstName @Model.LastName</strong>.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row fade-in">
+    <div class="col-md-12">
+        <div class="card-custom">
+            <div class="card-header-custom" style="background: var(--danger-gradient);">
+                <i class="fas fa-user-times me-3"></i>Employee Information to be Deleted
+            </div>
+            <div class="card-body-custom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="detail-row">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="detail-label">
+                                        <i class="fas fa-hashtag me-2"></i>Employee ID
+                                    </span>
+                                </div>
+                                <div class="col-md-8">
+                                    <span class="detail-value"><strong>#@Model.Id</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="detail-label">
+                                        <i class="fas fa-user me-2"></i>Full Name
+                                    </span>
+                                </div>
+                                <div class="col-md-8">
+                                    <span class="detail-value">@Model.FirstName @Model.MiddleName @Model.LastName</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="detail-label">
+                                        <i class="fas fa-envelope me-2"></i>Email
+                                    </span>
+                                </div>
+                                <div class="col-md-8">
+                                    <span class="detail-value">@Model.Email</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="detail-row">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="detail-label">
+                                        <i class="fas fa-building me-2"></i>Department
+                                    </span>
+                                </div>
+                                <div class="col-md-8">
+                                    <span class="badge badge-custom badge-primary">@Model.Department</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="detail-label">
+                                        <i class="fas fa-briefcase me-2"></i>Designation
+                                    </span>
+                                </div>
+                                <div class="col-md-8">
+                                    <span class="detail-value">@Model.Designation</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="detail-label">
+                                        <i class="fas fa-calendar-alt me-2"></i>Date Joined
+                                    </span>
+                                </div>
+                                <div class="col-md-8">
+                                    <span class="detail-value">@Model.DateOfJoining.ToString("MMMM dd, yyyy")</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form asp-action="Delete" method="post" class="mt-4 fade-in">
+    <input type="hidden" asp-for="Id" />
+    <div class="d-flex gap-2">
+        <button type="submit" class="btn btn-danger">
+            <i class="fas fa-trash-alt me-2"></i>Yes, Delete Permanently
+        </button>
+        <a asp-action="Index" class="btn btn-secondary">
+            <i class="fas fa-times me-2"></i>No, Cancel
+        </a>
+    </div>
+</form>
